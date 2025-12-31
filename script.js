@@ -30,3 +30,10 @@ form.addEventListener("submit", function(e){
   alert("Thank you, your message has been submitted!");
   form.reset(); // Clear form
 });
+
+  document.getElementById('downloadCv').addEventListener('click', function() {
+    const link = document.createElement('a');
+    link.href = 'mahi resume.pdf'; // path to your CV
+    link.download = 'mahi resume.pdf';
+    link.click();
+  });
