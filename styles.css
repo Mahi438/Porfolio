@@ -261,6 +261,7 @@ header {
   border: 1px solid #ff6900;
 }
 
+
 /* FOOTER */
 .footer {
   background: #1a1a1a;
@@ -305,6 +306,7 @@ header {
     height: auto;
     object-fit: cover;
   }
+  
 }
 
 /* MOBILE */
