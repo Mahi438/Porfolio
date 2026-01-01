@@ -183,7 +183,7 @@ header {
 
 /* PORTFOLIO */
 .portfolio {
-  padding: 50px 30px;
+  padding: 20px;
 }
 .portfolio h2 {
   text-align: center;
@@ -298,6 +298,9 @@ header {
   .about-right p {
     font-size: 16px;
   }
+  .skills{
+    justify-content: center;
+  }
 
   .projects {
     grid-template-columns: 1fr;
@@ -372,7 +375,9 @@ header {
   .about-right p {
     font-size: 14px;
   }
-
+ .skills{
+    justify-content: center;
+  }
   .projects {
     grid-template-columns: 1fr;
   }
