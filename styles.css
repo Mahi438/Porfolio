@@ -276,12 +276,10 @@ header {
     padding-top: 100px;
   }
 
-  .stats {
-    justify-content: center;
-  }
+  
 
   .img-circle {
-    width: 400px;
+    width: 100%;
     height: 500px;
   }
 
