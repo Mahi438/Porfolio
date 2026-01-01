@@ -30,7 +30,9 @@ header {
   font-size: 22px;
   font-weight: bold;
 }
-.logo span { color: #ff6900; }
+.logo span {
+  color: #ff6900;
+}
 
 .nav-links {
   list-style: none;
@@ -73,18 +75,34 @@ header {
   font-size: 42px;
   color: #ff6900;
 }
-.home-left h3 { font-size: 26px; }
-.home-left h4 { color: #ccc; }
+.home-left h3 {
+  font-size: 26px;
+}
+.home-left h4 {
+  color: #ccc;
+}
 
-.btn {
+/* ===== HOME BUTTONS (FIXED) ===== */
+.home-buttons {
+  display: flex;
+  gap: 15px;
   margin-top: 20px;
-  padding: 10px 20px;
+}
+
+.home-buttons .btn,
+.home-buttons .hire-btn {
+  padding: 12px 22px;
+  border-radius: 25px;
   border: 1px solid #ff6900;
   background: transparent;
   color: #fff;
+  font-weight: 600;
   cursor: pointer;
+  text-decoration: none;
 }
-.btn:hover {
+
+.home-buttons .btn:hover,
+.home-buttons .hire-btn:hover {
   background: #ff6900;
   color: #000;
 }
@@ -146,10 +164,12 @@ header {
   height: 500px;
   border-radius: 10px;
 }
+
 .about-right p {
   line-height: 1.6;
   font-size: 18px;
 }
+
 .skills {
   display: flex;
   flex-wrap: wrap;
@@ -170,11 +190,13 @@ header {
   margin-bottom: 30px;
   font-size: 36px;
 }
+
 .projects {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 20px;
 }
+
 .project {
   background: #1a1a1a;
   padding: 15px;
@@ -202,6 +224,7 @@ header {
   margin-bottom: 30px;
   font-size: 36px;
 }
+
 .contact form {
   max-width: 400px;
   margin: auto;
@@ -209,6 +232,7 @@ header {
   padding: 30px;
   border-radius: 8px;
 }
+
 .contact input,
 .contact textarea {
   width: 100%;
@@ -217,6 +241,7 @@ header {
   border: 2px solid #ccc;
   border-radius: 4px;
 }
+
 .contact button {
   background: #ff6900;
   color: #000;
@@ -245,32 +270,19 @@ header {
   text-decoration: none;
 }
 
-/* RESPONSIVE FIXES */
-
 /* TABLET */
 @media (max-width: 1024px) and (min-width: 730px) {
   .home {
-    
-    text-align: left;
     padding-top: 100px;
-   
   }
- 
+
   .stats {
-    flex-direction: row;
     justify-content: center;
   }
 
   .img-circle {
     width: 400px;
     height: 500px;
-    margin-top: 20px;
-  }
-  .img-circle img {
-    width: 100%;
-    height: 500px;
-    object-fit: cover;
-   
   }
 
   .about {
@@ -278,28 +290,24 @@ header {
     text-align: center;
   }
 
-  .about-left img {
-    width: 360px;
-  height: 500px;
-  }
   .about-right p {
     font-size: 16px;
   }
+
   .projects {
     grid-template-columns: 1fr;
-    
-  }
-  .project img {
-    height: auto;
-    object-fit: cover;
   }
 }
 
 /* MOBILE */
 @media (max-width: 600px) {
+  .menu-icon {
+    display: block;
+  }
 
-  .menu-icon { display: block; }
-  .hire-btn.desktop-btn { display: none; }
+  .hire-btn.desktop-btn {
+    display: none;
+  }
 
   .nav-links {
     position: absolute;
@@ -311,31 +319,28 @@ header {
     padding: 20px;
     border-radius: 8px;
   }
-  .nav-links.show { display: flex; }
+  .nav-links.show {
+    display: flex;
+  }
 
   .home {
     flex-direction: column;
     text-align: left;
-   
-   
   }
-.home-left {
+
+  .home-left {
     margin-left: 25px;
   }
+
   .stats {
-    flex-direction: row;       /* Keep boxes in a row */
-    justify-content: space-between;
     gap: 10px;
-    overflow-x: auto;          /* Allow horizontal scroll if needed */
+    overflow-x: auto;
     padding: 0 10px;
   }
 
   .stat-box {
-    flex: 0 0 auto;            /* Prevent shrinking */
-    min-width: 100px;          /* Adjust width to fit screen */
-    text-align: center;
+    min-width: 100px;
   }
-
 
   .img-circle {
     width: 300px;
@@ -343,33 +348,25 @@ header {
     margin-top: 30px;
   }
 
-  .img-circle img {
-    width: 300px;
-    height: 500px;
-    object-fit: cover;
-  }
-
   .about {
     flex-direction: column;
     text-align: center;
     gap: 20px;
   }
+
   .about-left img {
     width: 300px;
-  height: 500px;
+    height: 500px;
   }
+
   .about-right p {
     font-size: 14px;
-    text-align: center;
   }
 
   .projects {
     grid-template-columns: 1fr;
   }
-.project img {
-    height: auto;
-    object-fit: cover;
-  }
+
   .contact form {
     width: 90%;
     padding: 20px;
