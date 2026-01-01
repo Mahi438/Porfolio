@@ -203,7 +203,7 @@ header {
 }
 .project img {
   width: 100%;
-  height: 180px;
+  height: auto;
   object-fit: cover;
 }
 .project h3 {
@@ -297,6 +297,10 @@ header {
   .projects {
     grid-template-columns: 1fr;
   }
+  .project img {
+    height: auto;
+    object-fit: cover;
+  }
 }
 
 /* MOBILE */
@@ -366,7 +370,10 @@ header {
   .projects {
     grid-template-columns: 1fr;
   }
-
+  .project img {
+    height: auto;
+    object-fit: cover;
+  }
   .contact form {
     width: 90%;
     padding: 20px;
