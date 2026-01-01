@@ -1,3 +1,4 @@
+/* GLOBAL */
 * {
   margin: 0;
   padding: 0;
@@ -81,6 +82,11 @@ header {
   border: 1px solid #ff6900;
   background: transparent;
   color: #fff;
+  cursor: pointer;
+}
+.btn:hover {
+  background: #ff6900;
+  color: #000;
 }
 
 /* STATS */
@@ -98,10 +104,9 @@ header {
 }
 .stat-box h3 {
   font-size: 18px;
-  
 }
 
-/* IMAGE DESKTOP SAME */
+/* IMAGE DESKTOP */
 .img-circle {
   width: 610px;
   height: 660px;
@@ -110,12 +115,12 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
 .img-circle img {
-  width: 600px;
-  height: 650px;
-  border-radius: 50%;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
@@ -123,7 +128,6 @@ header {
 .Me {
   text-align: center;
   font-size: 36px;
-  
 }
 .U {
   text-align: center;
@@ -138,13 +142,13 @@ header {
 }
 
 .about-left img {
-  width: 280px;
+  width: 360px;
+  height: 500px;
   border-radius: 10px;
 }
 .about-right p {
   line-height: 1.6;
   font-size: 18px;
-  
 }
 .skills {
   display: flex;
@@ -152,7 +156,6 @@ header {
   gap: 10px;
   margin-top: 20px;
 }
-
 .skill {
   border: 1px solid #ff6900;
   padding: 6px 14px;
@@ -162,22 +165,20 @@ header {
 .portfolio {
   padding: 50px 30px;
 }
-
-.projects {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-}
 .portfolio h2 {
   text-align: center;
   margin-bottom: 30px;
   font-size: 36px;
 }
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
 .project {
   background: #1a1a1a;
   padding: 15px;
 }
-
 .project img {
   width: 100%;
   height: 180px;
@@ -191,10 +192,10 @@ header {
   margin-top: 5px;
   color: #ccc;
 }
+
 /* CONTACT */
 .contact {
   padding-bottom: 40px;
-   
 }
 .contact h2 {
   text-align: center;
@@ -204,11 +205,10 @@ header {
 .contact form {
   max-width: 400px;
   margin: auto;
-  background-color:rgba(128, 128, 128, 0.144);
+  background-color: rgba(128, 128, 128, 0.144);
   padding: 30px;
   border-radius: 8px;
 }
-
 .contact input,
 .contact textarea {
   width: 100%;
@@ -224,23 +224,21 @@ header {
   border-radius: 4px;
   border: none;
   cursor: pointer;
-  
 }
 .contact button:hover {
-  background:#000;
-  color:#fff;
+  background: #000;
+  color: #fff;
 }
+
 /* FOOTER */
 .footer {
   background: #1a1a1a;
   text-align: center;
   padding: 20px;
 }
-
 .footer-links {
   margin-top: 10px;
 }
-
 .footer-links a {
   color: #ff6900;
   margin: 0 10px;
@@ -248,10 +246,60 @@ header {
 }
 
 /* RESPONSIVE FIXES */
-@media (max-width: 768px) {
+
+/* TABLET */
+@media (max-width: 1024px) and (min-width: 730px) {
+  .home {
+    
+    text-align: left;
+    padding-top: 100px;
+   
+  }
+ 
+  .stats {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .img-circle {
+    width: 400px;
+    height: 500px;
+    margin-top: 20px;
+  }
+  .img-circle img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+   
+  }
+
+  .about {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-left img {
+    width: 360px;
+  height: 500px;
+  }
+  .about-right p {
+    font-size: 16px;
+  }
+  .projects {
+    grid-template-columns: 1fr;
+    
+  }
+  .project img {
+    height: auto;
+    object-fit: cover;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
 
   .menu-icon { display: block; }
-  .desktop-btn { display: none; }
+  .hire-btn.desktop-btn { display: none; }
 
   .nav-links {
     position: absolute;
@@ -261,42 +309,69 @@ header {
     flex-direction: column;
     display: none;
     padding: 20px;
+    border-radius: 8px;
   }
   .nav-links.show { display: flex; }
 
   .home {
     flex-direction: column;
+    text-align: left;
+   
+   
+  }
+.home-left {
+    margin-left: 25px;
+  }
+  .stats {
+    flex-direction: row;       /* Keep boxes in a row */
+    justify-content: space-between;
+    gap: 10px;
+    overflow-x: auto;          /* Allow horizontal scroll if needed */
+    padding: 0 10px;
+  }
+
+  .stat-box {
+    flex: 0 0 auto;            /* Prevent shrinking */
+    min-width: 100px;          /* Adjust width to fit screen */
     text-align: center;
   }
 
-  .stats {
-    flex-direction: column;
-   
-    justify-content: center;
-   
-  }
-.stat-box h3{
-    font-size: 18px;
-  }
-  /* MOBILE IMAGE FIX */
+
   .img-circle {
-    width: 280px;
-    height: 310px;
+    width: 300px;
+    height: 500px;
     margin-top: 30px;
   }
 
   .img-circle img {
-    width: 100%;
-    height: 300px;
+    width: 300px;
+    height: 500px;
     object-fit: cover;
   }
 
   .about {
     flex-direction: column;
     text-align: center;
+    gap: 20px;
+  }
+  .about-left img {
+    width: 300px;
+  height: 500px;
   }
   .about-right p {
-    font-size: 15px;
+    font-size: 14px;
     text-align: center;
+  }
+
+  .projects {
+    grid-template-columns: 1fr;
+  }
+.project img {
+    height: auto;
+    object-fit: cover;
+  }
+  .contact form {
+    width: 90%;
+    padding: 20px;
   }
 }
