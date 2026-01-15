@@ -37,3 +37,21 @@ form.addEventListener("submit", function(e){
     link.download = 'mahi resume.pdf';
     link.click();
   });
+  document.getElementById("contact-form").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  emailjs.sendForm(
+    "service_5v4sfj7",
+    "template_t4th6xo",
+    this
+  ).then(
+    function() {
+      alert("Message sent successfully!");
+      document.getElementById("contact-form").reset();
+    },
+    function(error) {
+      alert("Failed to send message");
+      console.log(error);
+    }
+  );
+});
