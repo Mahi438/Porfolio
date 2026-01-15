@@ -153,7 +153,8 @@ header {
 .Me {
   text-align: center;
   font-size: 24px;
-      font-weight: 600;
+    font-weight: 600;
+    margin-bottom: 10px;
 
 }
 .U {
@@ -272,8 +273,11 @@ header {
 
 /* TEXT */
 .project h3 {
-  font-size: 20px;
+  font-size: 18px;
   color: #fff;
+  font-weight: 600;
+  margin-bottom: 5px;
+  margin-top: 5px;
 }
 
 .project p {
@@ -285,16 +289,73 @@ header {
 /* HOVER EFFECT */
 .project:hover {
   transform: translateY(-10px);
-  box-shadow: 0 15px 40px rgba(249, 115, 22, 0.35);
 }
 
 .project:hover img {
   transform: scale(1.1);
 }
 
-.project:hover h3 {
-  color: #f97316;
+/* SERVICES SECTION */
+.services {
+  padding: 30px;
+  color: #fff;
+  text-align: center;
 }
+
+.services h2 {
+  font-size: 24px;
+  color: #fff;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.service-subtitle {
+  color: oklch(87.2% .01 258.338);
+  margin-bottom: 50px;
+  font-size: 15px;
+}
+
+/* SERVICE GRID */
+.service-boxes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+/* SERVICE CARD */
+.service-card {
+  background: #232323;;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 5px;
+  transition: all 0.4s ease;
+}
+
+.service-card i {
+  font-size: 40px;
+  color: #f97316;
+  margin-bottom: 15px;
+}
+
+.service-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  font-size: 14px;
+  color: oklch(87.2% .01 258.338);
+  line-height: 1.6;
+}
+
+/* HOVER EFFECT */
+.service-card:hover {
+  transform: translateY(-12px);
+}
+
+
 
 /* ================= CONTACT SECTION ================= */
 
@@ -304,9 +365,15 @@ header {
 
 .contact h2 {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
   font-size: 24px;
   font-weight: 600;
+}
+.contact p{
+   text-align: center;
+  color: oklch(87.2% .01 258.338);
+  font-size: 14px;
+  margin-bottom: 30px;
 }
 
 /* FORM LAYOUT */
@@ -405,6 +472,8 @@ footer p{
 .mail:hover {
   color: #ff6900;
 }
+
+
 /* TABLET */
 @media (max-width: 1024px) and (min-width: 730px) {
   .home {
@@ -444,6 +513,9 @@ footer p{
   .project img {
     height: auto;
     object-fit: cover;
+  }
+   .service-boxes {
+    grid-template-columns: repeat(2, 1fr);
   }
   
 }
@@ -524,8 +596,6 @@ footer p{
     height: auto;
     object-fit: cover;
   }
-  /* MOBILE RESPONSIVE */
-@media (max-width: 600px) {
   .contact form {
     grid-template-columns: 1fr;
   }
@@ -534,5 +604,7 @@ footer p{
   .contact button {
     grid-column: span 1;
   }
-}
+   .service-boxes {
+    grid-template-columns: 1fr;
+  }
 }
