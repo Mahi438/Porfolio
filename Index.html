@@ -11,6 +11,10 @@
     emailjs.init("5P95fxzmQCUOA-9OU"); // yahan apni EmailJS Public Key daalo
   })();
 </script>
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+/>
 </head>
 <body>
 
@@ -38,14 +42,21 @@
     <h2>Frontend Web Developer</h2>
 
 <div class="home-buttons">
-  <button class="btn" id="downloadCv">Download CV</button>
-  <a href="#contact" class="btn hire-btn">Hire Me</a>
+    <a href="#contact" class="btn hire-btn">Hire Me</a>
+
+<button class="btn download-cv">Download CV</button>
 </div>
     <div class="stats">
-      <div class="stat-box"><h3>1+<br>Experience</h3></div>
-      <div class="stat-box"><h3>5+<br>Projects</h3></div>
-      <div class="stat-box"><h3>10+<br>Skills</h3></div>
-    </div>
+  <div class="stat-box">
+    <h3><span class="stat-number">1+</span><br><span class="stat-text">Experience</span></h3>
+  </div>
+  <div class="stat-box">
+    <h3><span class="stat-number">5+</span><br><span class="stat-text">Projects</span></h3>
+  </div>
+  <div class="stat-box">
+    <h3><span class="stat-number">10+</span><br><span class="stat-text">Skills</span></h3>
+  </div>
+</div>
   </div>
 
   <div class="home-right">
@@ -56,20 +67,17 @@
 </section>
 
 <!-- ABOUT -->
-<h2 class="Me">About Me</h2>
+<h2 class="Me" id="about">About Me</h2>
 <p class="U">User Friendly Websites</p>
 
-<section class="about" id="about">
+<section class="about" >
   <div class="about-left">
     <img src="profile.jpg" alt="Profile">
   </div>
 
   <div class="about-right">
     <p>
-      I am Mahi Jain, a passionate and dedicated web developer with strong skills in HTML, CSS, JavaScript, React JS, and WordPress. I enjoy building responsive, user-friendly websites and web applications that combine clean design with smooth functionality.
-I have worked on projects like a Rajasthan Tourism Website and an Event Management System, where I implemented features such as user authentication, dynamic booking forms, admin dashboards, and Firebase integration. Alongside React, I also have practical experience in WordPress and WooCommerce, including theme customization, plugin management, and eCommerce setup.
-I am highly motivated to learn new technologies, solve challenges, and grow as a professional. I believe in writing clean, maintainable code, and I strive to deliver digital experiences that are both visually appealing and performant. My goal is to start my career as a Frontend Developer, contribute to meaningful projects, and continue improving my skills every day.
-    </p>
+      I am Mahi Jain, a Full Stack Web Developer skilled in HTML, CSS, JavaScript, React JS, Node.js, Express.js, and WordPress, with experience in Firebase and eCommerce development. I build responsive, user-friendly websites and web applications, including company websites, portfolio sites, eCommerce platforms, and dynamic web systems. I have worked on projects like Rajasthan Tourism, Event Management Systems, and business websites, implementing features such as user authentication, admin dashboards, dynamic forms, and backend services. Passionate about learning new technologies and writing maintainable code, I strive to deliver high-quality digital experiences.</p>
 
     <!-- SKILLS ICONS -->
 <div class="skills-icons">
@@ -99,13 +107,25 @@ I am highly motivated to learn new technologies, solve challenges, and grow as a
     <p>PHP</p>
   </div>
 
+
   <div class="skill-icon">
     <span>VS</span>
     <p>VS Code</p>
   </div>
-
+  <div class="skill-icon">
+    <span>No</span>
+    <p>Node.JS</p>
+  </div>
+<div class="skill-icon">
+    <span>Ex</span>
+    <p>Express.JS</p>
+  </div>
+ 
   
 </div>
+ <div class="About-buttons">
+<button class="btn download-cv">Download CV</button></div>
+
 </section>
 
 <!-- PORTFOLIO -->
@@ -130,6 +150,12 @@ I am highly motivated to learn new technologies, solve challenges, and grow as a
       <h3>WordPress Site</h3>
       <p>WooCommerce business website.</p>
     </div>
+
+    <div class="project">
+      <img src="project 4.png" alt="Project 2">
+      <h3>Company Website</h3>
+      <p>Robonext Digital tech Pvt Ltd Website</p>
+    </div>
   </div>
 </section>
 
@@ -138,16 +164,19 @@ I am highly motivated to learn new technologies, solve challenges, and grow as a
   <h2>Contact Me</h2>
 
   <form id="contact-form">
-  <input type="text" name="name" placeholder="Name" required>
-  <input type="email" name="email" placeholder="Email" required>
-  <textarea name="message" placeholder="Message" required></textarea>
-  <button type="submit">Send</button>
-</form>
+    <input type="text" name="name" placeholder="Full Name" required>
+    <input type="email" name="email" placeholder="Email" required>
+    <input type="tel" name="number" placeholder="Phone" maxlength="10">
+    <input type="text" name="subject" placeholder="Subject" required>
+    <textarea name="message" placeholder="Message" required></textarea>
+    <button type="submit">Send</button>
+  </form>
 </section>
 
 <!-- FOOTER -->
 <footer class="footer">
-  <p>© 2024 Mahi Jain</p>
+  <p>M.J.</p>
+  
 
   <div class="footer-links">
     <a href="#home">Home</a>
@@ -155,7 +184,10 @@ I am highly motivated to learn new technologies, solve challenges, and grow as a
     <a href="#portfolio">Portfolio</a>
     <a href="#contact">Contact</a>
   </div>
-</footer>
+<a href="mailto:jmahi5210@gmail.com" class="mail">
+  <i class="fa-solid fa-envelope"></i>
+  jmahi5210@gmail.com
+</a></footer>
 
 <script src="script.js"></script>
 </body>
