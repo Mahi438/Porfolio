@@ -340,8 +340,9 @@ header {
 }
 
 .service-card h3 {
-  font-size: 20px;
+  font-size: 18px;
   margin-bottom: 10px;
+  font-weight: 600;
 }
 
 .service-card p {
