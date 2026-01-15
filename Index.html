@@ -131,12 +131,20 @@ I am highly motivated to learn new technologies, solve challenges, and grow as a
 <section class="contact" id="contact">
   <h2>Contact Me</h2>
 
-  <form>
-    <input type="text" placeholder="Name" required>
-    <input type="email" placeholder="Email" required>
-    <textarea placeholder="Message"></textarea>
-    <button type="submit">Send</button>
-  </form>
+  <form action="https://formsubmit.co/jmahi5210@gmail.com" method="POST">
+  
+  <input type="text" name="name" placeholder="Name" required>
+  
+  <input type="email" name="email" placeholder="Email" required>
+  
+  <textarea name="message" placeholder="Message" required></textarea>
+
+  <!-- extra settings -->
+  <input type="hidden" name="_subject" value="New Portfolio Contact Message">
+  <input type="hidden" name="_captcha" value="false">
+
+  <button type="submit">Send</button>
+</form>
 </section>
 
 <!-- FOOTER -->
