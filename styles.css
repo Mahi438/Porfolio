@@ -165,7 +165,10 @@ header {
 .about {
   display: flex;
   gap: 50px;
-  padding: 40px;
+  padding-left: 35px;
+  padding-right: 16px;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 .About-buttons .btn{
   padding: 12px 22px;
