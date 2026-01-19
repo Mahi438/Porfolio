@@ -594,7 +594,7 @@ footer p{
   }
 
  .skills-icons {
-    justify-content:left;
+    justify-content:center;
   }
   .skill-icon span {
     width: 60px;
