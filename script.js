@@ -20,8 +20,8 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
 document.querySelectorAll('.download-cv').forEach(button => {
   button.addEventListener('click', function () {
     const link = document.createElement('a');
-    link.href = 'mahi resume.pdf';
-    link.download = 'mahi resume.pdf';
+    link.href = 'mahiresume.pdf';
+    link.download = 'mahiresume.pdf';
     link.click();
   });
 });
