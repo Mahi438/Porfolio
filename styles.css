@@ -149,82 +149,72 @@ header {
   object-fit: cover;
 }
 
-/* ABOUT */
+/* ABOUT TITLE */
 .Me {
   text-align: center;
-  font-size: 24px;
-    font-weight: 600;
-    margin-bottom: 10px;
-
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 5px;
 }
+
 .U {
   text-align: center;
-  color: oklch(87.2% .01 258.338);
+  color: #aaa;
+  margin-bottom: 30px;
 }
 
+/* ABOUT SECTION */
 .about {
-  display: flex;
-  gap: 50px;
-  padding-left: 35px;
-  padding-right: 16px;
-  padding-top: 40px;
-  padding-bottom: 40px;
-}
-.About-buttons .btn{
-  padding: 12px 22px;
-  border: 1px solid #ff6900;
-  background: #ff6900;
-  color: #fff;
-  font-weight: 600;
-  cursor: pointer;
-  text-decoration: none;
-  margin-top: 20px;
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px 20px;
 }
 
-.about-left img {
-  width: 330px;
-  height: 500px;
-  border-radius: 10px;
+/* RIGHT CONTENT */
+.about-right {
+font-size: 1.05rem;
+  line-height: 1.9;
+  color: #dddddd;
+  background:#232323;
+  padding: 30px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  text-align: center;
 }
 
-.about-right p {
-  line-height: 1.6;
-  font-size: 25px;
-  margin-bottom: 10px;
-;
+.about-list {
+  margin: 20px auto;
+  padding-left: 20px;
+  list-style-type: square;
 }
-.about li{
-    color: oklch(87.2% .01 258.338);
-    line-height: 2.0;
-    font-size: 16px;
-       text-align: left;
 
+.about-list li {
+  color: #ccc;
+  font-size: 18px;
+  line-height: 1.9;
+  margin-bottom: 12px;
+  text-align: left;
+}
 
-}
-.about ul{
-  list-style-type:square;
-}
-/* ICON SKILLS */
+/* SKILLS */
 .skills-icons {
   display: flex;
-  justify-content: left;
+  justify-content: center;   /* center align */
   gap: 20px;
   margin-top: 30px;
   flex-wrap: wrap;
-  
 }
 
+/* SKILL ITEM */
 .skill-icon {
   text-align: center;
-  color: #fff;
-  
-  
 }
 
+/* ICON CIRCLE */
 .skill-icon span {
   width: 70px;
   height: 70px;
-  border: 4px solid #ff6900;
+  border: 3px solid #ff6900;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -234,15 +224,45 @@ header {
   font-size: 18px;
   margin: auto;
   background: #232323;
-  
-  
+  transition: 0.3s;
+}
+
+/* HOVER EFFECT */
+.skill-icon span:hover {
+  background: #ff6900;
+  color: #fff;
+  transform: scale(1.1);
 }
 
 .skill-icon p {
   margin-top: 8px;
   font-size: 13px;
   color: #ccc;
-  
+}
+
+/* BUTTON BOX CENTER */
+.About-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+/* BUTTON STYLE */
+.About-buttons .btn {
+  padding: 12px 28px;
+  border: none;
+  background: #ff6900;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+/* BUTTON HOVER */
+.About-buttons .btn:hover {
+  background: #e65c00;
+  transform: scale(1.05);
 }
 
 /* PORTFOLIO */
@@ -292,11 +312,11 @@ header {
 
 /* Ye ensure karne ke liye ki h3 par bhi koi underline na aaye */
 .project h3 {
-    font-size: 18px;
+    font-size: 16px;
     color: oklch(87.2% .01 258.338);
-    font-weight: 600;
+    font-weight: 500;
     margin-bottom: 5px;
-    margin-top: 5px;
+    margin-top: 10px;
     padding-bottom: 15px;
     text-decoration: none !important; /* Underline remove karne ke liye */
 }
@@ -362,7 +382,7 @@ header {
 }
 
 .service-card p {
-  font-size: 14px;
+  font-size: 16px;
   color: oklch(87.2% .01 258.338);
   line-height: 1.6;
 }
