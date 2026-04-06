@@ -262,8 +262,8 @@ header {
 /* PROJECT GRID */
 .projects {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 25px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 35px;
 }
 
 /* PROJECT CARD */
@@ -283,15 +283,22 @@ header {
   transition: transform 0.4s ease;
 }
 
-/* TEXT */
-.project h3 {
-  font-size: 18px;
-  color: oklch(87.2% .01 258.338);
-  font-weight: 600;
-  margin-bottom: 5px;
-  margin-top: 5px;
-    padding-bottom: 15px;
+/* Isse underline hat jayegi */
+.project-link {
+    text-decoration: none !important;
+    display: block; /* Poore card ko clickable rakhne ke liye */
+    color: inherit; /* Text ka color wahi rahe jo h3 mein set hai */
+}
 
+/* Ye ensure karne ke liye ki h3 par bhi koi underline na aaye */
+.project h3 {
+    font-size: 18px;
+    color: oklch(87.2% .01 258.338);
+    font-weight: 600;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    padding-bottom: 15px;
+    text-decoration: none !important; /* Underline remove karne ke liye */
 }
 
 
